@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Research@Sarat</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav class="greedy-nav">
+        <a class="site-title" href="index.html">Sarat Chandra Nagavarapu</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a class="" href="index.html">Home</a></li>
+          <li class="masthead__menu-item"><a class="active" href="research.html">Research</a></li>
+          <li class="masthead__menu-item"><a class="" href="pub.html">Publications</a></li>
+          <li class="masthead__menu-item"><a class="" href="presentations.html">Presentations</a></li>
+          <li class="masthead__menu-item"><a class="" href="experience.html">Experience</a></li>
+          <li class="masthead__menu-item"><a class="" href="ach.html">Achievements</a></li>
+          <li class="masthead__menu-item"><a href="Sarat_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div id="main" role="main">
+    
+<aside class="sidebar">
+  <div class="author__avatar">
+    <img src="Sarat.png" alt="Sarat Chandra Nagavarapu">
+  </div>
+  <div class="author__content">
+    <h3 class="author__name">Sarat Chandra Nagavarapu</h3>
+    <p class="author__bio">Senior Research Scientist at Advanced Remanufacturing and Technology Centre (ARTC), A*STAR, Singapore</p>
+  </div>
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      <li><span class="label">Singapore</span></li>
+      <li><a href="mailto:nagavarapu@a-star.edu.sg"><span class="label">Email</span></a></li>
+      <li><a href="https://in.linkedin.com/in/saratcn" target="_blank" rel="noopener"><img src="linkedin.png" alt="LinkedIn"> <span class="label">LinkedIn</span></a></li>
+      <li><a href="https://scholar.google.co.in/citations?user=-7udTa8AAAAJ&amp;hl=en" target="_blank" rel="noopener"><img src="google_scholar.jpg" alt="Google Scholar"> <span class="label">Google Scholar</span></a></li>
+      <li><a href="https://www.researchgate.net/profile/Sarat_Nagavarapu" target="_blank" rel="noopener"><img src="ResearchGate_Logo.png" alt="ResearchGate"> <span class="label">ResearchGate</span></a></li>
+      <li><a href="http://dblp.uni-trier.de/pers/hd/n/Nagavarapu:Sarat_Chandra" target="_blank" rel="noopener"><img src="dblp.png" alt="dblp"> <span class="label">dblp</span></a></li>
+      <li><a href="http://orcid.org/0000-0001-7961-8257" target="_blank" rel="noopener"><img src="orcid.png" alt="ORCID"> <span class="label">ORCID</span></a></li>
+      <li><a href="https://publons.com/author/1319748/" target="_blank" rel="noopener"><img src="Publons.jpg" alt="Publons"> <span class="label">Publons</span></a></li>
+    </ul>
+  </div>
+</aside>
+
+    <main class="page" aria-label="Content"><div class="page__inner-wrap"><section class="page__content">
+      <article class="paper">
+        
+<div class="fluid" id="subcontents">
+
+<section class="project research-topic">
+<h2>Scalable and Deployment-Oriented Multi-Robot Coordination</h2>
+<p>
+I am currently taking part in work on scalable and deployment-oriented multi-robot coordination, with a focus on enabling teams of mobile robots to operate reliably in practical environments. The work is concerned with coordination algorithms, planning, collision avoidance, and system-level considerations needed for moving from research prototypes toward deployable multi-robot systems.
+</p>
+<p>
+A key topic of interest in this direction is Multi-Agent Path Finding (MAPF), where the objective is to compute collision-free paths for multiple robots from their start locations to their assigned goals. In deployment-oriented settings, MAPF becomes especially important when robot teams must coordinate in shared spaces, handle congestion, avoid conflicts, and adapt to changes during execution.
+</p>
+</section>
+<h2>Multi Robot Exploration and Mapping with Collision Avoidance</h2>
+<p>
+The objective is to obtain a topological representation of the environment incrementally built by a team of robots. A major challenge in an autonomous exploration task is to declare completion, which signifies that the entire environment is covered. Exploration and map building using multiple robots also need to deal with issues such as redundant exploration, collision avoidance, coordination and information exchange between the robots. This work investigates multi-robot map
+building and inter robot collision avoidance techniques while exploring an unknown environment. Map of the environment is represented as a graph and the task is to explore each and every vertex and edge of the unknown graph. An efficient multi robot graph exploration strategy, named as Improved Mulri-Robot Depth First Search (IMRDFS) has been presented in which each robot takes independent decision for exploring unvisited portions of the unknown graph. Each robot builds its own map while exploring the environment. An efficient data structure, Modified Incidence Matrix (MIM) representing the partial map information allows exchange of information between the robots and minimises the redundancy in exploration. In addition, a generic framework for multi-agent graph exploration and mapping, which is independent of communication method used between robots, initial placement of robots and search strategy has also been proposed. In multi-robot systems, avoiding inter robot collisions is crucial for efficient task completion and increased robustness. Therefore, a predefined constant speed change approach is proposed to ensure collision avoidance using minimal sensing. Simulation results verify the performance of the algorithm on various tree and graph topologies. Experiments with multiple robots show multi-robot exploration avoiding inter-robot collisions with robustness to robot failures.</p>
+<u>Related Publications</u>:<br/><br/>
+<ul>
+<i><font color="blue">Multi-Robot Graph Exploration and Map Building with Collision Avoidance: A Decentralized Approach</font></i>  [<a href="http://link.springer.com/article/10.1007/s10846-015-0309-9" target="_blank"><b>doi</b></a>],
+<br/>
+<b>Nagavarapu, S.C.</b>, Vachhani, L. and Sinha, A.
+<br/>
+Journal of Intelligent &amp; Robotic Systems, vol. 83, no. 3, pp. 503-523, 2016.
+<br/>
+
+</ul>
+<ul>
+<i><font color="blue">Generalizing Multi-Agent Graph Exploration Techniques</font></i>,  [<a href="https://link.springer.com/article/10.1007/s12555-019-0067-8" target="_blank"><b>doi</b></a>]  [<a href="https://rdcu.be/b49Sg" target="_blank"><b>read-only pdf</b></a>],
+<br/>
+<b>Nagavarapu, S.C.</b>, Vachhani, L., Sinha, A. and Buruily, S.
+<br/>
+International Journal of Control, Automation, and Systems, vol. 19, no. 1, pp. 491-504, 2021.
+<br/>
+
+</ul>
+<ul>
+<i><font color="blue">A Decentralized Approach for Autonomous Multi-Robot Exploration and Map Building for Tree Structures</font></i>  [<a href="https://www.researchgate.net/publication/303814984_A_Decentralized_Approach_for_Autonomous_Multi-Robot_Exploration_and_Map_Building_for_Tree_Structures" target="_blank"><b>doi</b></a>],
+<br/>
+<b>Nagavarapu, S.C.</b>, Vachhani, L. and Sinha, A.
+<br/>
+Proceedings of the Indian Control Conference (ICC), Chennai, India, pp. 274-279, 2015.
+<br/>
+
+</ul>
+<ul>
+<i><font color="blue">A Fail-Safe Graph Exploration Algorithm for Large-Scale Multi-Robot Systems</font></i>,
+<br/>
+<b>Nagavarapu, S.C.</b>, Vachhani, L. and Sinha, A.
+<br/>
+(Manuscript in preparation).
+<br/>
+</ul>
+<ul>
+<i><font color="blue">A Beam Steering based Framework for Continuous Target Tracking in Multi-Robot Systems</font></i>,
+<br/>
+<b>Nagavarapu, S.C.</b>, Vachhani, L. and Sinha, A.
+<br/>
+(Manuscript in preparation).
+<br/>
+</ul>
+<figure class="video-figure">
+  <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="560.7" height="315" type="text/html" src="https://www.youtube.com/embed/0i_imvZIW68?autoplay=0&amp;fs=0&amp;iv_load_policy=3&amp;rel=0&amp;cc_load_policy=0&amp;start=0&amp;end=0&amp;origin=http://youtubeembedcode.com"></iframe>
+  <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="560.7" height="315" type="text/html" src="https://www.youtube.com/embed/142gQNoP-9c?autoplay=0&amp;fs=0&amp;iv_load_policy=3&amp;rel=0&amp;cc_load_policy=0&amp;start=0&amp;end=0&amp;origin=http://youtubeembedcode.com"></iframe>
+  <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="560.7" height="315" type="text/html" src="https://www.youtube.com/embed/xuupCOYErOU?autoplay=0&amp;fs=0&amp;iv_load_policy=3&amp;rel=0&amp;cc_load_policy=0&amp;start=0&amp;end=0&amp;origin=http://youtubeembedcode.com"></iframe>
+  <br/>
+</figure>
+<h2>Vehicle Routing Algorithms and Travel Time Prediction for a Fleet of Autonomous (Driverless) Vehicles</h2>
+<p>The objective of this work is to design and develop routing algorithms for fleets of autonomous vehicles to perform mobility on demand services, scheduled vehicle transportation, etc. The system and the algorithms should be able to handle the varying traffic conditions, weather conditions, stochastic customer demands, etc. The FMS algorithms must be capable enough to handle such fluctuations in the traffic conditions, and re-route the vehicles accordingly. We also plan to extend the FMS algorithms to larger road networks. This work also aims to develop a high fidelity simulation engine to simulate the autonomous vehicle routing behavior.
+</p>
+<u>Related Publications</u>:<br/><br/>
+<ul>
+<i><font color="blue">A Generic GPU-Accelerated Framework for the Dial-A-Ride Problem</font></i>  [<a href="https://ieeexplore.ieee.org/document/9095251" target="_blank"><b>doi</b></a>],
+<br/>
+Pandi, R.R., Ho, S.G., <b>Nagavarapu, S.C.</b> and Dauwels, J.
+<br/>
+IEEE Transactions on Intelligent Transportation Systems, vol. 22, no. 10, pp. 6473-6488, 2021.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Disruption Management for Dial-A-Ride Systems</font></i>  [<a href="https://ieeexplore.ieee.org/document/9186274" target="_blank"><b>doi</b></a>],
+<br/>
+Pandi, R.R., Ho, S.G., <b>Nagavarapu, S.C.</b>, Tripathy, T. and Dauwels, J.
+<br/>
+IEEE Intelligent Transportation Systems Magazine, vol. 12, no. 4, pp. 219-234, 2020.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Enhancing Autonomous Vehicle Navigation Through Computer Vision: Techniques for Lane Marker Detection and Rain Removal</font></i>  [<a href="https://link.springer.com/chapter/10.1007/978-3-031-72959-1_8" target="_blank"><b>doi</b></a>],
+<br/>
+<b>Nagavarapu, S.C.</b>, Abraham, A., Li, S. and Dauwels, J.
+<br/>
+Internet of Vehicles and Computer Vision Solutions for Smart City Transformations. Lecture Notes in Intelligent Transportation and Infrastructure. Springer, Cham, pp.167-191, 2025.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Solving Dial-A-Ride Problems using Multiple Ant Colony System with Fleet Size Minimisation</font></i>  [<a href="https://doi.org/10.1007/978-3-319-66939-7_28" target="_blank"><b>doi</b></a>],
+<br/>
+Tripathy, T., <b>Nagavarapu, S.C.</b>, Azizian, K., Pandi, R.R. and Dauwels, J.
+<br/>
+Advances in Computational Intelligence Systems (ACIS), pp. 325-336, vol. 650, 2018.
+
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Transforming Public Safety and QoL in Smart Cities: Automated Event Detection and Response Generation with AI and IoT</font></i>  [<a href="https://link.springer.com/chapter/10.1007/978-3-031-72959-1_12" target="_blank"><b>doi</b></a>],
+<br/>
+Pargi, M.K., Abraham, A. and <b>Nagavarapu, S.C.</b>
+<br/>
+Internet of Vehicles and Computer Vision Solutions for Smart City Transformations. Lecture Notes in Intelligent Transportation and Infrastructure. Springer, Cham, pp.267-290, 2025.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Development of a Simulation Platform to Implement Vehicle Routing Algorithms for Large Scale Fleet Management Systems</font></i>  [<a href="https://ieeexplore.ieee.org/document/8317958/" target="_blank"><b>doi</b></a>],
+<br/>
+<b>Nagavarapu, S.C.</b>, Tripathy, T. and Dauwels, J.
+<br/>
+Proceedings of the 20th IEEE International Conference on Intelligent Transportation Systems (ITSC): Workshop, Yokohama, Japan, pp. 124-129, 2017.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Improved Tabu Search Heuristic for Static Dial-a-ride Problem: Faster and Better Convergence</font></i>  [<a href="https://arxiv.org/pdf/1801.09547v1.pdf" target="_blank"><b>doi</b></a>],
+<br/>
+Ho, S.G., <b>Nagavarapu, S.C.</b>, Pandi, R.R. and Dauwels, J.
+<br/>
+Presented at the 25th Intelligent Transportation Systems World Congress (ITS-WC), Copenhagen, Denmark, 2018.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">An Improved Tabu Search Heuristic for Static Dial-A-Ride Problem</font></i>  [<a href="https://arxiv.org/abs/1801.09547" target="_blank"><b>arXiv preprint</b></a>],
+<br/>
+Ho, S.G., <b>Nagavarapu, S.C.</b>, Pandi, R.R., Azizian, K. and Dauwels, J.
+<br/>
+(arXiv preprint available).
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Multi-atomic Annealing Heuristic for the Dial-a-ride Problem</font></i> [<a href="https://ieeexplore.ieee.org/document/8476748" target="_blank"><b>doi</b></a>],
+<br/>
+Ho, S.G., Pandi, R.R., <b>Nagavarapu, S.C.</b> and Dauwels, J.
+<br/>
+Proceedings of the 14th IEEE International Conference on Service Operations and Logistics, and Informatics (SOLI), Singapore, pp. 272-277, 2018.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">GPU-Accelerated Tabu Search Algorithm for Dial-A-Ride Problem</font></i>  [<a href="https://ieeexplore.ieee.org/document/8569472" target="_blank"><b>doi</b></a>],
+<br/>
+Pandi, R.R., Ho, S.G., <b>Nagavarapu, S.C.</b>, Tripathy, T. and Dauwels, J.
+<br/>
+Proceedings of the 21st IEEE International Conference on Intelligent Transportation Systems (ITSC), Hawaii, USA, pp. 2519-2524, 2018.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Solving Time-Dependent Dial-A-Ride Problem using Greedy Ant Colony Optimization</font></i>  [<a href="https://ieeexplore.ieee.org/document/8569733" target="_blank"><b>doi</b></a>],
+<br/>
+Ho, S.G., Koh, H.W., Pandi, R.R., <b>Nagavarapu, S.C.</b> and Dauwels, J.
+<br/>
+Proceedings of the 21st IEEE International Conference on Intelligent Transportation Systems (ITSC), Hawaii, USA, pp. 778-785, 2018.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Deterministic Annealing for Depot Optimization: Applications to the Dial-A-Ride Problem</font></i>  [<a href="https://ieeexplore.ieee.org/document/8628642" target="_blank"><b>doi</b></a>],
+<br/>
+Pandi, R.R., Ho, S.G., <b>Nagavarapu, S.C.</b> and Dauwels, J.
+<br/>
+Proceedings of the 9th IEEE Symposium Series on Computational Intelligence (SSCI), Bangalore, India, pp. 88-95, 2018.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Adaptive Algorithm for Dial-A-Ride Problem with Vehicle Breakdown</font></i>  [<a href="https://ieeexplore.ieee.org/document/8795619" target="_blank"><b>doi</b></a>],
+<br/>
+Pandi, R.R., Ho, S.G., <b>Nagavarapu, S.C.</b> and Dauwels, J.
+<br/>
+Proceedings of the 18th European Control Conference (ECC), Naples, Italy, pp. 2682-2688, 2019.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Data-driven Models for Short-term Travel Time Prediction</font></i>  [<a href="https://ieeexplore.ieee.org/document/8917456" target="_blank"><b>doi</b></a>],
+<br/>
+Narayanan, A.K., Pranesh, C., <b>Nagavarapu, S.C.</b>, Kumar, B.A. and Dauwels, J.
+<br/>
+Proceedings of the 22nd IEEE International Conference on Intelligent Transportation Systems (ITSC), Auckland, New Zealand, pp. 1941-1946, 2019.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Design and implementation of a Joint Sensing &amp; Communication System for Connected Autonomous Vehicles</font></i>  [<a href="https://ieeexplore.ieee.org/abstract/document/10004341" target="_blank"><b>doi</b></a>],
+<br/>
+Mathew, L.K., <b>Nagavarapu, S.C.</b>, and Abraham, A.
+<br/>
+Proceedings of the 17th International Conference on Control, Automation, Robotics and Vision (ICARCV), Singapore, pp. 392-396, 2022.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Recent Trends in Autonomous Vehicle Validation Ensuring Road Safety with Emphasis on Learning Algorithms</font></i>  [<a href="https://ieeexplore.ieee.org/abstract/document/10004304" target="_blank"><b>doi</b></a>],
+<br/>
+Abraham, A., <b>Nagavarapu, S.C.</b>, Shitala, P., Vyas, P., and Mathew, L.K.
+<br/>
+Proceedings of the 17th International Conference on Control, Automation, Robotics and Vision (ICARCV), Singapore, pp. 397-404, 2022.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">A Dynamic Object Removal and Reconstruction Algorithm for Point Clouds</font></i>  [<a href="https://ieeexplore.ieee.org/document/10425733" target="_blank"><b>doi</b></a>],
+<br/>
+<b>Nagavarapu, S.C.</b>, Abraham, A., Nithish, M.S., and Dauwels, J.
+<br/>
+Proceedings of the 17th IEEE International Conference on Service Operations and Logistics, and Informatics (SOLI), Singapore, pp. 1-8, 2023.
+<br/>
+</ul>
+
+
+<h2>Space Debris Removal in Low Earth Orbit (LEO) using CubeSats</h2>
+<p>
+The aim of this research proposal is to design a small satellite system to de-orbit orbital debris. Space debris in the near earth orbit is a growing concern for the space community. Recent studies on the instability of the debris population in the low Earth orbit (LEO, defined
+as the region below 2000 km altitude) indicate that the environment has reached a point where collisions among existing objects will force the LEO population to increase, at least in the next 200 years, even without any new launches. Since launches and LEO satellites are projected to grow exponentially in the coming decade, the debris problem in LEO is also expected to grow. Hence, clean-up of near Earth space from all the debris that has accumulated from defunct satellites and spent upper stages of launch vehicles will make it safer to put up satellites in orbit. In this study, we intend to do a comprehensive system analysis study to understand what size and mass of debris can be deorbited from any given LEO altitude with a small physical device that can be the payload for a CubeSat. The main objective is to perform the systems analysis study and finalize the most optimal deorbit payload for LEO altitudes. We also aim to conduct a comprehensive literature survey on space debris tracking, rendezvous, capture and de-orbit mechanisms. From this analysis, we try to identify the CubeSat compatible debris capture &amp; de-orbit mechanisms to deorbit the XSat and VELOX-II satellites. Deorbiter CubeSat design &amp; orbital decay analysis for the debris deorbiting CubeSat under the effect of solar flux, drag coefficient, drag surface area, etc. are the expected outcomes. Besides, we plan to design a prototype for the debris deorbiter CubeSat equipped with a pair of robotic hands to capture and deorbit the space debris.
+</p>
+<u>Related Publications</u>:<br/><br/>
+<ul>
+<i><font color="blue">CubeSats for Space Debris Removal from LEO: Prototype Design of a Robotic Arm-based Deorbiter CubeSat</font></i>   [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0273117724008123" target="_blank"><b>doi</b></a>],
+<br/>
+<b>Nagavarapu, S.C.</b>, Mogan, L.B., Chandran, A., and Hastings, D.E.
+<br/>
+Advances in Space Research, vol. 75, no. 9, pp. 6896-6910, 2025.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">A Robotic Arm-Based Deorbiter CubeSat for Space Debris Removal from LEO</font></i>  [<a href="https://app.cospar-assembly.org/2023/browser/presentation/32872" target="_blank"><b>url</b></a>],
+<br/>
+<b>Nagavarapu, S.C.</b>, Mogan, L.B., Chandran, A., and Hastings, D.E.
+<br/>
+Presented at the 5th COSPAR Symposium on Space Science with Small Satellites, Singapore, 16-21 April, 2023.
+<br/><br/>
+</ul>
+<ul>
+<i><font color="blue">Orbital Decay Analysis for Debris Deorbiting CubeSats in LEO: A Case Study for the VELOX-II Deorbit Mission</font></i>  [<a href="https://conference.sdo.esoc.esa.int/proceedings/sdc8/paper/297" target="_blank"><b>doi</b></a>],
+<br/>
+<b>Nagavarapu, S.C.</b>, Chandran, A., and Hastings, D.E.
+<br/>
+Proceedings of the 8th European Conference on Space Debris, Darmstadt, Germany, 20 - 23 Apr 2021.
+<br/>
+</ul>
+
+
+<h2>Optimal Fleet Size for Multi-Robot Exploration</h2>
+<p>
+The time to complete the exploration depends on the number
+of agents (team size or fleet size) used for exploration. Fleet size is often considered to be one of the important parameters in real time robotic applications such as surveillance, terrain mapping, search and rescue, etc. Finding an analytical expression for number of agents describing its relation with a given strategy, communication method and topology is challenging. The goal is to come up with a method to find the optimal number of agents for multi agent graph exploration.</p>
+<h2>Wheeler (Wireless Controlled Mobile Robot)</h2>
+<p>
+Wheeler is a wirelessly controllable mobile robot designed from scratch. The main objective is to construct a robot chassis from scratch, which is capable of moving to any direction, based on the command given using the wireless remote control. The robot is capable enough to carry smaller payloads (eg. laptop, small equipments, etc.). In order to have a light weight body, we have chosen steel chassis plates and wheels with rubber covering. PIC 16F877A microcontroller  has ben used to program the robot motion controls.</p>
+
+<h2>Collaborators</h2>
+<ol>
+<li><p>
+<a href="https://www.sc.iitb.ac.in/~leena/" target="_blank"><b>Prof. Leena Vachhani </b>(PhD advisor)</a>
+</p></li>
+<li><p>
+<a href="https://sites.google.com/iitb.ac.in/arpitasinha" target="_blank"><b>Prof. Arpita Sinha </b>(PhD advisor)</a>
+</p></li>
+<li><p>
+<a href="https://www.dauwelslab.com/justin-dauwels" target="_blank"><b>Prof. Justin Dauwels </b>(Post-doc advisor)</a>
+</p></li>
+<li><p>
+<a href="https://sites.google.com/view/rameshramasamypandi" target="_blank"><b>Dr. Ramesh Ramasamy Pandi</b> (PhD student: co-supervised)</a>
+</p></li>
+<li><p>
+<a href="https://sg.linkedin.com/in/hosongguang" target="_blank"><b>Mr. Song Guang Ho</b> (M.Sc. student: co-supervised)</a>
+</p></li>
+<li><p>
+<a href="https://sites.google.com/view/twinkletripathy/" target="_blank"><b>Dr. Twinkle Tripathy</b></a>
+</p></li>
+<li><p>
+<a href="https://dr.ntu.edu.sg/cris/rp/rp00431" target="_blank"><b>Prof. Amal Chandran </b>(Post-doc advisor)</a>
+</p></li>
+<li><p>
+<a href="https://aeroastro.mit.edu/people/daniel-e-hastings/" target="_blank"><b>Prof. Daniel E. Hastings </b>(Post-doc advisor)</a>
+</p></li>
+<li><p>
+<a href="https://sites.google.com/view/bachu/home" target="_blank"><b>Dr. Anil Kumar Bachu</b></a>
+</p></li>
+<li><p>
+<a href="https://www.researchgate.net/profile/Kaveh_Azizian" target="_blank"><b>Dr. Kaveh Azizian</b></a>
+</p></li>
+<li><p>
+<a href="https://www.researchgate.net/profile/Somnath_Buriuly" target="_blank"><b>Mr. Somnath Buriuly</b></a>
+</p></li>
+<li><p>
+<a><b>Mr. Nithish Selvaraj Muthuchamy</b> (M.Sc. student: co-supervised)</a>
+</p></li>
+<li><p>
+<a><b>Mr. Akash Narayanan</b> (M.Sc. student: co-supervised)</a>
+</p></li>
+<li><p>
+<a><b>Mr. Li Sihao</b> (M.Sc. student: co-supervised)</a>
+</p></li>
+<li><p>
+<a><b>Mr. Laveneishyan B. Mogan</b> (B.E. student: co-supervising)</a>
+</p></li>
+</ol>
+</figure></div>
+
+
+      </article>
+        </section>
+      </div>
+    </main>
+  </div>
+<footer class="page__footer"><div class="page__footer-follow"></div><div class="page__footer-copyright">&copy; 2026 Sarat Chandra Nagavarapu. Powered by static HTML.</div></footer>
+</body>
+</html>
