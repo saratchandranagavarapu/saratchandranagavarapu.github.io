@@ -314,3 +314,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Remove heading underline/separator on mobile */
+@media screen and (max-width: 768px) {
+  .page__content h1,
+  .page__content h2,
+  .page__content h3 {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+  }
+}
