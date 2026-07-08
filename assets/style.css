@@ -461,3 +461,24 @@ img {
     padding-top: 150px !important;
   }
 }
+
+/* Visitor counter/map section */
+.visitor-widget {
+  margin-top: 0.8rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.visitor-widget iframe,
+.visitor-widget img,
+.visitor-widget object,
+.visitor-widget embed,
+.visitor-widget script {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .visitor-widget {
+    text-align: center;
+  }
+}
