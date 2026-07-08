@@ -447,48 +447,172 @@ img {
   transform: translateY(0px);
 }
 
-/* Keep top navigation fixed while scrolling */
-.masthead {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 9999 !important;
-  background: #ffffff !important;
-  border-bottom: 1px solid #f2f3f3 !important;
-}
+/* =========================================================
+   FINAL OVERRIDES: header, sidebar, and visitor map
+   Paste at the end of the CSS file.
+   ========================================================= */
 
-@media screen and (max-width: 768px) {
-  .visitor-widget {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+/* Desktop/laptop: fixed top header, left-aligned menu next to name, fixed sidebar */
+@media screen and (min-width: 769px) {
+
+  body {
+    padding-top: 68px !important;
+  }
+
+  .masthead {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #f2f3f3 !important;
+  }
+
+  .masthead__inner-wrap {
+    display: block !important;
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+    padding: 1rem 2rem !important;
+  }
+
+  .greedy-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: auto !important;
+    min-width: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .site-title,
+  .greedy-nav .site-title {
+    flex: 0 0 auto !important;
+    display: inline-block !important;
+    margin: 0 2.2rem 0 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
     text-align: left !important;
   }
 
-  .visitor-widget iframe,
-  .visitor-widget img,
-  .visitor-widget object,
-  .visitor-widget embed,
-  .visitor-widget canvas,
-  .visitor-widget svg {
-    display: block !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
+  .visible-links {
+    flex: 0 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 1.15rem !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    text-align: left !important;
+  }
+
+  .visible-links li,
+  .masthead__menu-item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .visible-links li a,
+  .masthead__menu-item a {
+    margin: 0 !important;
+    padding: 0 0 0.35rem 0 !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid transparent !important;
+  }
+
+  .visible-links li a:hover,
+  .visible-links li a.active,
+  .masthead__menu-item a:hover,
+  .masthead__menu-item a.active {
+    color: #494e52 !important;
+    border-bottom-color: var(--primary-color) !important;
+    text-decoration: none !important;
+  }
+
+  .sidebar {
+    position: fixed !important;
+    top: 96px !important;
+    left: calc((100vw - 1280px) / 2 + 1rem) !important;
+    width: 220px !important;
+    max-height: calc(100vh - 110px) !important;
+    overflow-y: auto !important;
+    margin-top: 0 !important;
+  }
+
+  .page {
+    margin-left: 260px !important;
   }
 }
 
-/* Visitor counter/map section */
+/* Mobile/tablet: keep header usable and avoid fixed sidebar */
+@media screen and (max-width: 768px) {
+
+  body {
+    padding-top: 0 !important;
+  }
+
+  .masthead {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 99999 !important;
+    background: #ffffff !important;
+  }
+
+  .greedy-nav {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .site-title,
+  .greedy-nav .site-title {
+    display: block !important;
+    margin: 0 0 0.8rem 0 !important;
+    white-space: normal !important;
+    text-align: left !important;
+  }
+
+  .visible-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 0.75rem 1.2rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    list-style: none !important;
+  }
+
+  .sidebar {
+    position: static !important;
+    width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .page {
+    margin-left: 0 !important;
+  }
+}
+
+/* Visitor map: force left alignment and keep the generated widget compact */
 .visitor-widget {
-  width: auto !important;
-  max-width: none !important;
+  width: 180px !important;
+  max-width: 180px !important;
   min-width: 0 !important;
-
-  margin-top: 0.8rem !important;
-  margin-bottom: 2.5rem !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-
-  padding-left: 0 !important;
+  margin: 0.8rem 0 2.5rem 0 !important;
+  padding: 0 !important;
   text-align: left !important;
   display: block !important;
+  overflow: visible !important;
+}
+
+.visitor-widget * {
+  text-align: left !important;
 }
 
 .visitor-widget iframe,
@@ -496,10 +620,37 @@ img {
 .visitor-widget object,
 .visitor-widget embed,
 .visitor-widget canvas,
-.visitor-widget svg {
+.visitor-widget svg,
+.visitor-widget table,
+.visitor-widget div,
+.visitor-widget a {
   display: block !important;
   margin-left: 0 !important;
   margin-right: auto !important;
-  max-width: 100% !important;
-  height: auto !important;
+  max-width: 180px !important;
+}
+
+/* This targets the actual MapMyVisitors/ClustrMaps script output more aggressively */
+#mapmyvisitors,
+#mapmyvisitors + *,
+#mapmyvisitors ~ * {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
+}
+
+/* If the widget creates a full-width internal block, keep its content left */
+.visitor-widget [style*="text-align:center"],
+.visitor-widget [style*="text-align: center"] {
+  text-align: left !important;
+}
+
+@media screen and (max-width: 768px) {
+  .visitor-widget {
+    width: 180px !important;
+    max-width: 180px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+  }
 }
