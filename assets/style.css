@@ -538,9 +538,16 @@ img {
     top: 96px !important;
     left: calc((100vw - 1280px) / 2 + 1rem) !important;
     width: 220px !important;
-    max-height: calc(100vh - 110px) !important;
-    overflow-y: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    overflow-x: visible !important;
     margin-top: 0 !important;
+    scrollbar-width: none !important;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    display: none !important;
   }
 
   .page {
@@ -652,5 +659,23 @@ img {
     margin-left: 0 !important;
     margin-right: auto !important;
     text-align: left !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL SAFETY OVERRIDE: no visible scrollbar in left panel
+   ========================================================= */
+@media screen and (min-width: 769px) {
+  .sidebar {
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    overflow-x: visible !important;
+    scrollbar-width: none !important;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    display: none !important;
   }
 }
