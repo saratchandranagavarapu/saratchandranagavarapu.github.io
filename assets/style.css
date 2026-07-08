@@ -464,21 +464,37 @@ img {
 
 /* Visitor counter/map section */
 .visitor-widget {
-  margin-top: 0.8rem;
-  margin-bottom: 2.5rem;
-  text-align: left;
+  width: 25% !important;
+  max-width: 180px !important;
+  min-width: 120px !important;
+
+  margin-top: 0.8rem !important;
+  margin-bottom: 2.5rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  text-align: center !important;
 }
 
 .visitor-widget iframe,
 .visitor-widget img,
 .visitor-widget object,
 .visitor-widget embed,
-.visitor-widget script {
-  max-width: 100%;
+.visitor-widget canvas,
+.visitor-widget svg {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
 }
 
+/* Mobile visitor widget */
 @media screen and (max-width: 768px) {
   .visitor-widget {
-    text-align: center;
+    width: 45% !important;
+    max-width: 180px !important;
+    min-width: 120px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
   }
 }
