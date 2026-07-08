@@ -22,6 +22,7 @@ Also place these image/CV files in the same folder as `index.html`:
 - `ResearchGate_Logo.png`
 - `dblp.png`
 - `orcid.png`
+- `SciProfiles.png`
 - `Publons.jpg`
 
 `pub.html` is the only publications page in this version. `publications.html` and `projects.html` are not included.
