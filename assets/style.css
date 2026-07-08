@@ -447,29 +447,78 @@ img {
   transform: translateY(0px);
 }
 
+/* Keep top navigation fixed while scrolling */
+.masthead {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #f2f3f3 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .visitor-widget {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .visitor-widget iframe,
+  .visitor-widget img,
+  .visitor-widget object,
+  .visitor-widget embed,
+  .visitor-widget canvas,
+  .visitor-widget svg {
+    display: block !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Visitor counter/map section */
+.visitor-widget {
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+
+  margin-top: 0.8rem !important;
+  margin-bottom: 2.5rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  padding-left: 0 !important;
+  text-align: left !important;
+  display: block !important;
+}
+
+.visitor-widget iframe,
+.visitor-widget img,
+.visitor-widget object,
+.visitor-widget embed,
+.visitor-widget canvas,
+.visitor-widget svg {
+  display: block !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
 /* =========================================================
-   FINAL OVERRIDES: header, sidebar, and visitor map
-   Paste at the end of the CSS file.
+   FINAL CLEAN FIX: fixed header + sticky sidebar with NO sidebar scrollbar
    ========================================================= */
 
-/* Desktop/laptop: fixed top header, left-aligned menu next to name, fixed sidebar */
+/* Keep the top navigation visible while the page scrolls */
+.masthead {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 99999 !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #f2f3f3 !important;
+}
+
+/* Desktop header: keep menu items close to the name, not pushed to the right */
 @media screen and (min-width: 769px) {
-
-  body {
-    padding-top: 68px !important;
-  }
-
-  .masthead {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    z-index: 99999 !important;
-    background: #ffffff !important;
-    border-bottom: 1px solid #f2f3f3 !important;
-  }
-
   .masthead__inner-wrap {
     display: block !important;
     max-width: 1280px !important;
@@ -533,31 +582,42 @@ img {
     text-decoration: none !important;
   }
 
+  /* Keep sidebar in the normal page layout, but sticky. No internal scroll area. */
   .sidebar {
-    position: fixed !important;
-    top: 96px !important;
-    left: calc((100vw - 1280px) / 2 + 1rem) !important;
+    position: sticky !important;
+    top: 6rem !important;
+    left: auto !important;
+    float: none !important;
+    align-self: flex-start !important;
     width: 220px !important;
+    flex: 0 0 220px !important;
     max-height: none !important;
-    overflow: visible !important;
-    overflow-y: visible !important;
-    overflow-x: visible !important;
-    margin-top: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: clip !important;
+    overflow-y: clip !important;
+    overflow-x: clip !important;
+    margin-top: 2em !important;
+    padding-right: 0 !important;
+    border-right: 0 !important;
+    box-shadow: none !important;
     scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
   }
 
   .sidebar::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
     display: none !important;
   }
 
   .page {
-    margin-left: 260px !important;
+    margin-left: 0 !important;
   }
 }
 
-/* Mobile/tablet: keep header usable and avoid fixed sidebar */
+/* Mobile/tablet: sidebar should be normal and no left-panel scroll region */
 @media screen and (max-width: 768px) {
-
   body {
     padding-top: 0 !important;
   }
@@ -569,44 +629,22 @@ img {
     background: #ffffff !important;
   }
 
-  .greedy-nav {
-    display: block !important;
-    width: 100% !important;
-    text-align: left !important;
-  }
-
-  .site-title,
-  .greedy-nav .site-title {
-    display: block !important;
-    margin: 0 0 0.8rem 0 !important;
-    white-space: normal !important;
-    text-align: left !important;
-  }
-
-  .visible-links {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-    gap: 0.75rem 1.2rem !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding-left: 0 !important;
-    list-style: none !important;
-  }
-
   .sidebar {
     position: static !important;
     width: 100% !important;
     max-height: none !important;
+    height: auto !important;
     overflow: visible !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
   }
 
-  .page {
-    margin-left: 0 !important;
+  .sidebar::-webkit-scrollbar {
+    display: none !important;
   }
 }
 
-/* Visitor map: force left alignment and keep the generated widget compact */
+/* Visitor map: compact and left aligned */
 .visitor-widget {
   width: 180px !important;
   max-width: 180px !important;
@@ -616,10 +654,6 @@ img {
   text-align: left !important;
   display: block !important;
   overflow: visible !important;
-}
-
-.visitor-widget * {
-  text-align: left !important;
 }
 
 .visitor-widget iframe,
@@ -635,47 +669,4 @@ img {
   margin-left: 0 !important;
   margin-right: auto !important;
   max-width: 180px !important;
-}
-
-/* This targets the actual MapMyVisitors/ClustrMaps script output more aggressively */
-#mapmyvisitors,
-#mapmyvisitors + *,
-#mapmyvisitors ~ * {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-  text-align: left !important;
-}
-
-/* If the widget creates a full-width internal block, keep its content left */
-.visitor-widget [style*="text-align:center"],
-.visitor-widget [style*="text-align: center"] {
-  text-align: left !important;
-}
-
-@media screen and (max-width: 768px) {
-  .visitor-widget {
-    width: 180px !important;
-    max-width: 180px !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-    text-align: left !important;
-  }
-}
-
-
-/* =========================================================
-   FINAL SAFETY OVERRIDE: no visible scrollbar in left panel
-   ========================================================= */
-@media screen and (min-width: 769px) {
-  .sidebar {
-    max-height: none !important;
-    overflow: visible !important;
-    overflow-y: visible !important;
-    overflow-x: visible !important;
-    scrollbar-width: none !important;
-  }
-
-  .sidebar::-webkit-scrollbar {
-    display: none !important;
-  }
 }
